@@ -20,18 +20,18 @@
             </flux:navlist.group>
             <flux:navlist.group :heading="__('User Management')" class="grid">
                 @can('user.view')
-                <flux:navlist.item icon="user-group" :href="route('user.index')"
-                    :current="request()->routeIs('user.index')" wire:navigate>{{ __('Manage User') }}
-                </flux:navlist.item>
-
+                    <flux:navlist.item icon="user-group" :href="route('user.index')"
+                        :current="request()->routeIs('user.index')" wire:navigate>{{ __('Manage User') }}
+                    </flux:navlist.item>
+                @endcan
                 @can('role.view')
                     <flux:navlist.item icon="user-circle" :href="route('role.index')"
                         :current="request()->routeIs('role.index')" wire:navigate>{{ __('Manage Role') }}
                     </flux:navlist.item>
                 @endcan
                 @can('car.view')
-                    <flux:navlist.item icon="user-circle" :href="route('car.index')" :current="request()->routeIs('car.index')"
-                        wire:navigate>{{ __('Manage Car') }}
+                    <flux:navlist.item icon="user-circle" :href="route('car.index')"
+                        :current="request()->routeIs('car.index')" wire:navigate>{{ __('Manage Car') }}
                     </flux:navlist.item>
                 @endcan
                 @can('brand.view')
