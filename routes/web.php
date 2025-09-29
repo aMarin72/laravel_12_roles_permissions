@@ -1,8 +1,10 @@
 <?php
 
 use Laravel\Fortify\Features;
+use App\Livewire\CarManagement;
 use App\Livewire\RoleManagement;
 use App\Livewire\UserManagement;
+use App\Livewire\BrandManagement;
 use App\Livewire\Settings\Profile;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\TwoFactor;
@@ -22,6 +24,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('user-management', UserManagement::class)->name('user.index');
     Route::get('role-management', RoleManagement::class)->name('role.index');
+    Route::get('car-management', CarManagement::class)->name('car.index');
+    Route::get('brand-management', BrandManagement::class)->name('brand.index');
 
     Route::get('settings/profile', Profile::class)->name('settings.profile');
     Route::get('settings/password', Password::class)->name('settings.password');
