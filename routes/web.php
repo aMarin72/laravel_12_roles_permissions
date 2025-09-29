@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Dashboard;
 use Laravel\Fortify\Features;
 use App\Livewire\CarManagement;
 use App\Livewire\RoleManagement;
@@ -15,7 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::view('dashboard', 'dashboard')
+// Route::view('dashboard', 'dashboard')
+//     ->middleware(['auth', 'verified'])
+//     ->name('dashboard');
+Route::get('dashboard', Dashboard::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
