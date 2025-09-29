@@ -1,0 +1,22 @@
+Subir a GitHub el proyecto:
+git init       // para iniciar el proyecto
+git status  // para ver que no hay commits
+git add .    // para agregar todo el proyecto
+git commit -m  “Aquí el comentario” // el primer commit
+git branch -M main
+git remote add origin https://github.com/aMarin72/sistema_alquiler.git //   este dato lo obtenemos de la página GitHub
+git push -u origin main
+
+Actualizar cambios del proyecto:
+git status
+git add .
+git commit -m  “Aquí el comentario”
+git push -u origin main
+
+Ver todos los commits:
+git log
+
+
+Para caragar datos:
+php artisan migrate:fresh
+php artisan db:seed --class=RolePermissionSeeder
